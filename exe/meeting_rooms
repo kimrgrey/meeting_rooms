@@ -1,0 +1,45 @@
+#!/usr/bin/env ruby
+
+require "meeting_rooms"
+
+ROOMS_COUNT = 2
+OPTIONS = [ "test" ]
+
+options = []
+
+ARGV.each do |key|
+  if OPTIONS.include?(key)
+    options << key
+    ARGV.delete(key)
+  end
+end
+
+verbose = options.include?("verbose")
+
+if ARGV.empty? && options.empty?
+  input_files = [ ARGF ]
+else
+  input_files = ARGV.map { |fname| File.open(fname, "r") }
+end
+
+if options.include?("test")
+  input_files += Dir["tests/*.txt"].map { |fname| File.open(fname, "r") }
+end
+
+begin
+  parser = MeetingRooms::Parser.new
+  scheduler = MeetingRooms::Scheduler.new(ROOMS_COUNT)
+
+  input_files.each do |file|
+    begin
+      meetings = parser.parse(file)
+      scheduler.schedule(meetings).each do |room|
+        puts "#{room}\n\n"
+      end
+    rescue MeetingRooms::ParserError => e
+      puts "Failed to parse #{file.path}: #{e.message}\n\n"
+    end
+  end
+ensure
+  input_files.each { |file| file.close }
+end
