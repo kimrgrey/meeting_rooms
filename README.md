@@ -2,7 +2,7 @@
 
 ## Installation
 
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment. Run `bundle exec meeting_rooms` to use the gem in this directory, ignoring other installed copies of this gem.
+After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment. Run `bundle exec meeting_rooms` to use the gem in this directory.
 
 
 ## Usage
@@ -41,7 +41,7 @@ In original task there is no any quality parameters for the schedule, that's why
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/meeting_rooms. This project is intended to be a safe, welcoming space for collaboration.
+Bug reports and pull requests are welcome on GitHub at https://github.com/[kimrgrey]/meeting_rooms. This project is intended to be a safe, welcoming space for collaboration.
 
 
 ## License
