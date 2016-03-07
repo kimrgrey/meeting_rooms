@@ -41,7 +41,7 @@ In original task there is no any quality parameters for the schedule, that's why
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[kimrgrey]/meeting_rooms. This project is intended to be a safe, welcoming space for collaboration.
+Bug reports and pull requests are welcome on GitHub at https://github.com/kimrgrey/meeting_rooms. This project is intended to be a safe, welcoming space for collaboration.
 
 
 ## License
