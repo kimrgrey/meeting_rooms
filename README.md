@@ -21,6 +21,24 @@ To run all tests and see the result just execute:
 bundle exec meeting_rooms test
 ```
 
+## Project structure
+
+The project consists of the following elements:
+
+- `Meeting` - represents a meeting, contains title and duration;
+- `Parser` - responsible for parsing of input files, raises `ParserError` in case of wrong format;
+- `Room` - represents a room, contains 2 `Section`: for morning meetings and for evening meetings;
+- `Section` - represents a time frame for the room, it has capacity - amount of hours that is available for scheduling;
+- `Scheduler` - represents an algorithm that selects room for the given meetings list;
+
+Executable part of the application is located in `exe/meeting_rooms`.
+
+## Improvements area
+
+It's totally possible to improve this code. For example, it's good idea to decouple printing logic and models. At this moment printing is implemented using `#to_s` in different classes. I've decided to not use any testing frameworks because I'm not sure that it is expected from coding challenge, but I definitely would add it in the real application.
+
+In original task there is no any quality parameters for the schedule, that's why meetings are not sorted and distributed as is.
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/meeting_rooms. This project is intended to be a safe, welcoming space for collaboration.
