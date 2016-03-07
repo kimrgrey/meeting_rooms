@@ -1,4 +1,4 @@
-# MeetingRooms
+# Meeting Rooms
 
 ## Installation
 
@@ -31,7 +31,7 @@ The project consists of the following elements:
 - `Section` - represents a time frame for the room, it has capacity - amount of hours that is available for scheduling;
 - `Scheduler` - represents an algorithm that selects room for the given meetings list;
 
-Executable part of the application is located in `exe/meeting_rooms`.
+Executable part of the application is located in `exe/meeting_rooms`. It's always good idea to start from [here](https://github.com/kimrgrey/meeting_rooms/blob/master/exe/meeting_rooms). But the main magic happens [here](https://github.com/kimrgrey/meeting_rooms/blob/master/lib/meeting_rooms/scheduler.rb).
 
 ## Improvements area
 
